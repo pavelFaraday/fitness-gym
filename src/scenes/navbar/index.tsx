@@ -4,6 +4,7 @@ import Logo from "@/assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -57,7 +58,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             ) : (
               <button
                 className="rounded-full bg-secondary-500 p-2"
-                onLcick={() => setisMenuToggled(!isMenuToggled)}
+                onClick={() => setisMenuToggled(!isMenuToggled)}
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
               </button>
