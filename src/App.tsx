@@ -1,26 +1,10 @@
 import { useState } from "react";
 import Navbar from "@/scenes/navbar";
-
-/* Typing with Enum */
-// ! enums exist after BUILD
-enum SelectefPage {
-  Home = "home",
-  Benefits = "benefits",
-  OurClasses = "ourClasses",
-  ContactUs = "contactus",
-}
-
-/* Typical Typing */
-/* type selectefPage2 = {
-  Home = "home",
-  Benefits = "benefits",
-  OurClasses = "ourClasses",
-  ContactUs = "contactus",
-} */
+import { SelectedPage } from "./shared/types";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<SelectefPage>(
-    SelectefPage.Home
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
   );
 
   return (
